@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+
+
+a {
+    text-decoration: none;
+    transition: 300ms ease;
+    position: relative;
+}
+
+a:hover {
+    color:#e61e21;
+}
+
+.btn {
+background-color: #e61e21;
+color: white;
+border-radius: 50px;
+padding: 12px 40px;
+border: none;
+transition: 300ms ease;
+}
+
+.btn:hover {
+    background-color:#403d56;
+}
+
+/* NAV */
+
+nav {
+    height: 400px;
+}
+
+nav figure {
+    margin: 0;
+}
+
+
+.nav__logo {
+    width: 100%;
+   
+}
+
+.nav__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+}
+
+.nav__link, .footer__link {
+    margin: 0 24px;
+    color: #403d56;
+}
+
+.link__hover-effect::after {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 3px;
+    background:#e61e21;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+h1 {
+    font-size: 48px;
+    color:#e61e21;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 32px;
+    color:#444444;
+    margin-bottom: 56px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 32px
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+}
+
+h1, h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.hotred {
+    color:#e61e21;
+}
+
+.white {
+    color: white;
+}
+
+/* LANDING-PAGE */
+
+#landing {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.landing__container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.landing__input--wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing__input {
+    width: 80%;
+    border-radius: 20px;
+    padding: 32px;
+    font-size: 24px;
+    margin-right: 16px;
+    border: 1px solid #403d56;
+}
+
+.landing__input:focus {
+    border-color: #e61e21;
+    outline: 2px solid #e61e21;
+}
+
+.landing__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e61e21;
+    color: white;
+    border-radius: 20px;
+    padding: 32px;
+    width: 20%;
+    border: none;
+    box-shadow: 7px 7px 14px rgba(1, 1, 1, 0.3);
+    transition: 300ms ease;
+}
+
+.landing__btn:hover {
+background-color: #0e59c3;
+}
+
+.search {
+   font-size: 32px;
+}
+
+.landing__img--wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 48px;
+}
+
+.landing__img {
+    max-width: 500px;
+    margin: 32px;
+}
+
+/* STREAMING SECTION */
+
+#streaming {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('./assets/backgroundcolor.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.streaming__wrapper{
+margin-top: 32px 0px 56px 0px;
+}
+
+
+/* Streaming platforms image */
+.streaming__img--wrapper {
+    max-width: 1400px;
+}
+
+.streaming__img {
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__links {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.footer__link {
+    margin: 0 24px 32px 24px;
+    font-weight: bold;
+}
+
+.footer__para {
+    color: white;
+    margin-bottom: 24px;
+    background-color: #e61e21;
+    padding: 4px 16px;
+}
+
+.footer__img--wrapper{
+    max-width: 200px;
+}
+
+.footer__img {
+    width: 100%;
+}
