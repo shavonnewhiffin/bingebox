@@ -51,3 +51,43 @@ function filterMovies(event) {
 renderMovies(event.target.value);
 }
 
+const searchBtn = document.getElementById('searchBtn');
+const searchInput = document.getElementById('searchInput');
+const resultsContainer = document.getElementById('resultsContainer')
+
+searchForm.addEventListener('submit',function(event){
+    event.preventDefault();
+    const query = searchInput.value;
+    if(query){
+     searchAPI(query);   
+    }
+});
+
+async function searchAPI(query){
+    const endpoint = `https://www.omdbapi.com/?apikey=d051fbc2&s=${encodeURIComponent(query)}` // Use encodeURIComponent for safe URL query parameters
+    movieWrapper.classList.add('movies__loading');
+    
+    try{
+    const response =  await fetch(endpoint);
+    const data = await response.json();
+    searchBtn.classList.remove('landing__btn--loading');
+    movieWrapper.classList.remove('movies__loading');
+    displayResults(data);
+    } catch(err){
+    console.error(err);
+    resultsContainer.innerHTML = "<p>Something went wrong.</p>";}
+    // } finally {
+    //     searchBtn.classList.remove('landing__btn--loading');
+    // }
+    }
+    
+    
+    
+    function displayResults(data) {
+        resultsContainer.innerHTML = data.Search
+        .slice(0,6)
+        .map(movie => movieHTML(movie))
+        .join(""); }
+    
+    searchAPI();
+    

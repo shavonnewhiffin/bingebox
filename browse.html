@@ -28,8 +28,8 @@
          <div class="nav__bar--wrapper">
          <h1 class="h1__browse">Browse Movies & TV Shows</h1>
          <div class="input__wrapper">
-         <input type="text" placeholder="Search for a movie or TV show..." class="browse__input">
-         <div class="search__wrapper">
+         <input type="search" placeholder="Search for a movie or TV show..." class="browse__input" id="searchInput" onchange="searchAPI()">
+         <div class="search__wrapper" id="searchBtn">
             <i class="fa-solid fa-magnifying-glass search__icon"></i>
          </div>
         </div>
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="content__wrapper">
-        <div class="movies movies__loading">
+        <div class="movies movies__loading results__container" id="resultsContainer">
             <i class="fa-solid fa-spinner movies__loading--spinner"></i>
         <!-- <div class="movie">
             <figure class="movie__img--wrapper">
