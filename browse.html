@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel =stylesheet href="styles.css">
+    <script src="browse.js" defer></script>
+    <script src="https://kit.fontawesome.com/fe42510387.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav__bar">
+        <div class="nav__content">
+                <figure class="nav__logo--wrapper">
+                    <a href="index.html"><img src="./assets/bingeboxlogo_250x150.png" alt="bingebox logo" class="nav__logo">
+                    </a></figure>
+                 <div class="nav__links">
+                     <a href="index.html" class="nav__link--white
+                     link__hover-effect"><b> Home</b></a>
+                     <a href="#" class="nav__link--white
+                     link__hover-effect"><b>Browse</b></a>
+                     <a href="#" class="nav__link--white
+                     link__hover-effect"><b>Trending</b></a>
+                     <a href="#"class="btn">Contact</a></button>
+                 </div>
+         </div>
+         <div class="nav__bar--wrapper">
+         <h1 class="h1__browse">Browse Movies & TV Shows</h1>
+         <div class="input__wrapper">
+         <input type="text" placeholder="Search for a movie or TV show..." class="browse__input">
+         <div class="search__wrapper">
+            <i class="fa-solid fa-magnifying-glass search__icon"></i>
+         </div>
+        </div>
+        </div>
+        </div>
+        <div class="overlay"> </div>
+        <div class="progress__bar">
+        </div>
+    </nav>
+    <section id="search">
+        <div class="filter__content--wrapper">
+            <div class="search__label">
+            <p class="search__info">Search results:</p>
+            </div>
+            <div>
+                <select id = "filter" onchange="filterMovies(event)">
+                    <option value="disabledselected">Sort</option>
+                    <option value="A_TO_Z">A to Z</option>
+                    <option value="Z_TO_A">Z to A</option>
+                    <option value="NEWEST_TO_OLDEST">Newest to Oldest</option>
+                    <option value="OLDEST_TO_NEWEST">Oldest to Newest</option>
+                    <option value="RATING">Rating</option>
+                </select>
+            </div>
+        </div>
+        <div class="content__wrapper">
+        <div class="movies movies__loading">
+            <i class="fa-solid fa-spinner movies__loading--spinner"></i>
+        <!-- <div class="movie">
+            <figure class="movie__img--wrapper">
+                <img src="" alt="" class="movie__img">
+            </figure>
+            <div class="movie__title">
+                Title
+            </div>
+            <div class="movie__year">
+                Year
+            </div>
+            <div class="movie__rating">
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star-half-alt"></i> 
+            </div>
+        </div> -->
+    </div>
+</div>
+    </section>
+    <footer>
+        <div class="footer__content">
+    <a href="#"><figure class="footer__logo--wrapper">
+        <img src="./assets/bingeboxstackedlogo.png" class="footer__logo" alt="">
+    </a>
+    </figure>
+    <div class="footer__links">
+        <a href="#" class="footer__link 
+        link__hover-effect">Home</a>
+        <a href="" class="footer__link 
+        link__hover-effect">Browse</a>
+        <a href="" class="footer__link 
+        link__hover-effect">Trending</a>
+        <a href="" class="footer__link 
+        link__hover-effect">Contact</a>
+    </div>
+    <p class="footer__para"> Copyright © Shavonne Whiffin 2025</p>
+    </div>
+       </footer>
+    </body>
+    </html>
+</body>
+</html>
