@@ -44,19 +44,18 @@
             <div class="search__label">
             <p class="search__info">Search results:</p>
             </div>
-            <div>
+            <div class="filter">
                 <select id = "filter" onchange="filterMovies(event)">
                     <option value="disabledselected">Sort</option>
                     <option value="A_TO_Z">A to Z</option>
                     <option value="Z_TO_A">Z to A</option>
                     <option value="NEWEST_TO_OLDEST">Newest to Oldest</option>
                     <option value="OLDEST_TO_NEWEST">Oldest to Newest</option>
-                    <option value="RATING">Rating</option>
                 </select>
             </div>
         </div>
         <div class="content__wrapper">
-        <div class="movies movies__loading results__container" id="resultsContainer">
+        <div class="movies movies__loading" id="movie__img--wrapper">
             <i class="fa-solid fa-spinner movies__loading--spinner"></i>
         <!-- <div class="movie">
             <figure class="movie__img--wrapper">

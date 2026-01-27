@@ -43,6 +43,14 @@ transition: 300ms ease;
     align-items: center;
 }
 
+select {
+    border-radius: 30px;
+    background-color: #e61e21;
+    color: white;
+    font-weight: 400;
+    border: none;
+}
+
 /* NAV */
 
 
@@ -174,12 +182,12 @@ max-width: 900px;
 margin: 0 auto;
 }
 
-.landing__input-wrapper {
-    width: 100%;
+.landing__input--wrapper {
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 250px;
+    max-width: 900px;
 }
 
 .landing__input {
@@ -191,9 +199,10 @@ margin: 0 auto;
     border: 1px solid #403d56;
 }
 
-.landing__input:focus {
+.landing__input:focus, .landing__input:hover {
     border-color: #e61e21;
-    outline: 2px solid #e61e21;
+    outline: 10px solid #e61e21;
+    outline: none;
 }
 
 .landing__btn {
@@ -212,8 +221,8 @@ margin: 0 auto;
 }
 
 .landing__btn:hover {
-background-color: #403d56;
-color: #ffc857;
+background-color: #ffc857;
+color: #e61e21;
 cursor: pointer;
 }
 
@@ -238,6 +247,19 @@ cursor: pointer;
     max-width: 500px;
     margin: 32px;
 }
+
+.filter__landing {
+    display:none ;
+}
+
+.filter__landing.filter__landing--visible {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 24px;
+}
+
 
 /* STREAMING SECTION */
 
@@ -321,7 +343,7 @@ align-items: center;
 }
 
 
-/* BROWSE PAGE */
+/* BROWSE.HTML PAGE */
 
 .nav__link--white, .footer__link--white {
     margin: 0 24px;

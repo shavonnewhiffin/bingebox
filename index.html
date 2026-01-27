@@ -33,9 +33,9 @@
 <div class="landing__subheader">
     <h2>Find the perfect show or movie in seconds.
 </div>
-<div class="input__wrapper">
-    <input type="search" value="" placeholder="Search for a movie or TV show..." class="landing__input" id="searchInput" onchange="searchAPI()">
-    <button type="submit" class="landing__btn landing__btn--loading" id="searchBtn" onchange="searchAPI()"><i class="fa-solid fa-magnifying-glass search"></i> <i class="fa-solid fa-spinner landing__btn--spinner"></i></button>
+<div class="landing__input--wrapper">
+    <input type="search" value="" placeholder="Search for a movie or TV show..." class="landing__input" id="searchInput">
+    <button type="submit" class="landing__btn" id="searchBtn"><i class="fa-solid fa-magnifying-glass search"></i> <i class="fa-solid fa-spinner landing__btn--spinner"></i></button>
 </div>
 </div>
 <!-- <figure class="landing__img--wrapper">
@@ -43,6 +43,15 @@
 </figure> -->
 </div>
     </section>
+    <div class="filter__landing" id="filter__box">
+        <select id = "filter" onchange="filterMovies(event)">
+            <option value="disabledselected">Sort</option>
+            <option value="A_TO_Z">A to Z</option>
+            <option value="Z_TO_A">Z to A</option>
+            <option value="NEWEST_TO_OLDEST">Newest to Oldest</option>
+            <option value="OLDEST_TO_NEWEST">Oldest to Newest</option>
+        </select>
+    </div>
     <div class="results__container" id="resultsContainer">
     </div>
 <section id="streaming">
